@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" name="oleksandr kalita">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <title>MeblivArt - about</title>
+<style>
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #af994c;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #c5ad55;
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <h1 class="header__headline">MeblivArt</h1>
+                <nav>
+                    <ul class="menu-links">
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./news.html">NEWS</a></li>
+                        <li><a href="./about.html">ABOUT COMPANY</a></li>
+                        <li><a href="./prod.html">T OF P</a></li>
+                        <li><a href="#">Info</a></li>
+                    </ul>
+                </nav>
+                <input type="text" class="header__input" placeholder="search">
+            </div>
+        </header>
+        <section class="main">
+            <section class="starter-section" style="background-image: url(./img/bg-picture-3.svg);">
+                <div class="starter__container center">
+                    <div class="starter__headline headline ">Зробіть замовлення онлайн</div>
+                    <div class="starter-slogan">
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="main-section">
+                <div class="main-main__container">
+                    <h1>Форма замовлення меблів</h1>
+
+                    <form action="submit_order.php" method="post">
+                        <label for="customerName">Ім'я та прізвище:</label>
+                        <input type="text" id="customerName" name="customerName" required>
+
+                        <label for="phoneNumber">Номер телефону:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                        <label for="country">Країна доставки:</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Виберіть...</option>
+                            <option value="ukraine">Україна</option>
+                            <option value="polska">Польша</option>
+                            <option value="usa">США</option>
+                        </select>
+
+                        <label for="region">Регіон доставки:</label>
+                        <input type="text" id="region" name="region" required>
+
+                        <label for="furnitureType">Тип меблів:</label>
+                        <select id="furnitureType" name="furnitureType" required>
+                            <option value="" disabled selected>Виберіть...</option>
+                            <option value="sofa">Диван</option>
+                            <option value="bed">Ліжко</option>
+                            <option value="table">Стіл</option>
+                            <option value="workplace">Робоче місце</option>
+                            <option value="kitchen">Кухонна мебель</option>
+                        </select>
+
+                        <label for="paymentType">Тип оплати:</label>
+                        <select id="paymentType" name="paymentType" required>
+                            <option value="" disabled selected>Виберіть...</option>
+                            <option value="creditCard">Кредитна карта</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="cash">Готівка</option>
+                        </select>
+
+                        <button type="submit">Відправити замовлення</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <a href="https://github.com/VLazorykOOP/weblab1-OleksandrKalita">&ltoleksandr kalita&gt</a>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
