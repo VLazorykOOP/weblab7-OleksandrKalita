@@ -17,7 +17,9 @@ ul li{
 a{
     text-decoration: none;
 }
-
+h1 {
+    transition: all 0.3s;
+}
 [class*="__container"] {
     margin: 0 auto;
     padding-left: 10px;

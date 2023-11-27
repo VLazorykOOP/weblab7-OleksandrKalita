@@ -11,6 +11,7 @@
     form {
         max-width: 600px;
         margin: 0 auto;
+        padding: 0 20px;
     }
 
     label {
@@ -18,7 +19,7 @@
         margin-bottom: 8px;
     }
 
-    input, select {
+    input, select, textarea {
         width: 100%;
         padding: 8px;
         margin-bottom: 16px;
@@ -69,7 +70,7 @@
                 <div class="main-main__container">
                     <h1>Форма замовлення меблів</h1>
 
-                    <form action="submit_order.php" method="post">
+                    <form id="form">
                         <label for="customerName">Ім'я та прізвище:</label>
                         <input type="text" id="customerName" name="customerName" required>
 
@@ -104,9 +105,14 @@
                             <option value="paypal">PayPal</option>
                             <option value="cash">Готівка</option>
                         </select>
-
+                        
+                        <textarea id="textarea" name="" id="" cols="30" rows="10"></textarea>
                         <button type="submit">Відправити замовлення</button>
+                        
                     </form>
+                    <button id="run_task">run task</button>
+                    <button id="search_info">пошук інформації</button>
+                    <button id="array_task">array task</button>
                 </div>
             </section>
         </section>
@@ -116,6 +122,6 @@
             </div>
         </footer>
     </div>
-    <script src="./js/script.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 </html>
